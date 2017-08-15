@@ -18,7 +18,7 @@ create a pdf that can be used to present.
     print: 'print-pdf',
     expand: 'print-pdf-expand'
   },
-  printCSS: 'path/to/print/style.css'
+  css: 'path/to/print/style.css'
 }
 ```
 
@@ -33,7 +33,7 @@ String expected in the query string to trigger print output.
 String expected in the query string to trigger fragment slide expansion. This
 will trigger print output as well.
 
-### printCSS 
+### css 
 
 The plugin will compile the path to the stand reveal.js print stylesheet automatically.
 If here is a problem with that, the url can be provided here.

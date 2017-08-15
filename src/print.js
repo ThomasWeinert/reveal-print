@@ -66,10 +66,10 @@ var RevealPrint = window.RevealPrint || (function() {
   config.print.trigger = config.print.trigger || {};
   var options = {
     trigger: {
-      print: config.trigger.print || 'print-pdf',
-      expand: config.trigger.expand || 'print-pdf-expand'
+      print: config.print.trigger.print || 'print-pdf',
+      expand: config.print.trigger.expand || 'print-pdf-expand'
     },
-    printCSS: config.printCSS || getDefaultPrintCSS() || ''
+    css: config.print.css || getDefaultPrintCSS() || ''
   };
 
   var queryString = window.location.search.toLowerCase();
@@ -80,12 +80,13 @@ var RevealPrint = window.RevealPrint || (function() {
       options.trigger.expand.toLowerCase()
   ) !== -1;
 
+  console.log(triggerPrintExpanded);
   if (triggerPrint || triggerPrintExpanded) {
-    if (options.printCSS) {
+    if (options.css !== '') {
       var link = document.createElement('link');
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = options.printCSS;
+      link.href = options.css;
       document.getElementsByTagName('head')[0].appendChild(link);
     }
     if (triggerPrintExpanded) {
