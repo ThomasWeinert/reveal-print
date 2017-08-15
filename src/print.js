@@ -80,7 +80,6 @@ var RevealPrint = window.RevealPrint || (function() {
       options.trigger.expand.toLowerCase()
   ) !== -1;
 
-  console.log(triggerPrintExpanded);
   if (triggerPrint || triggerPrintExpanded) {
     if (options.css !== '') {
       var link = document.createElement('link');
