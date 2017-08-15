@@ -10,6 +10,23 @@ clones the slide for each fragment. The first slide will contains the first
 fragment, the second the first and the second and so on. The goal is to
 create a pdf that can be used to present.
 
+## Installation
+
+You can install the plugin using bower or copy the file manually.
+
+```
+bower install --save reveal-print
+```
+
+After that add the plugin to the initialization:
+
+```javascript
+dependencies: [
+  { src: 'bower-components/rveal-print/src/print.js' },
+}
+```
+
+
 ## Options
 
 ```JavaScript
